@@ -36,7 +36,21 @@
             <p>Esta es una prueba para generar trafico de usuarios.</p>
         </div>
         <div>
-            <button class="submit">Generar evento</button>
+            <button class="submit" onclick="gtag('event',
+                'descargar_pdf', {
+                    'event_category': 'descargas',
+                    'event_label': 'Guía gratuita',
+                    'value': 1,
+                })">Generar evento</button>
+        </div>
+        <div onmouseover="gtag('event',
+            'ver_seccion', {
+                'event_category': 'interaccion',
+                'event_label': 'Seccion beneficios'
+            }
+        )">
+        <h2>Beneficios</h2>
+        <p>Con Intenet a tu medida tienes la justo lo que necesitas, para poder navegar de la forma más conveniente para ti.</p>
         </div>
     </div>
 </body>
